@@ -7,8 +7,6 @@ export const UsersApiActions = createActionGroup({
   events: {
     'User List': props<{ users: ReadonlyArray<User> }>(),
     'Add User': props<{ user:User }>(),
-    // 'Get User': props<{ user:User }>(),
-    'Set User': props<{ user:User }>(),
     'Update User': props<{ user:User }>(),
     'Remove User': props<{ user:User }>(),
   },

@@ -20,13 +20,7 @@ export const usersReducer = createReducer(
       
     );
  }),
-//  on(UsersApiActions.getUser, (_state, { user }) => 
-//   _state
-// ),
 
-// on(UsersApiActions.setUser, (_state, { user }) => 
-//   _state.filter((res) => res.id === user.id)
-// ),
   
 
 on(UsersApiActions.removeUser, (_state, { user }) =>
