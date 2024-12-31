@@ -113,8 +113,7 @@ export class UserListComponent implements OnInit  {
 
   openOrder(user:any){
  
-  
-  //  this.store.dispatch(UserActions.setUser({ user }))
+   this.store.dispatch(UserActions.setUser({ user }))
   //  this.store.dispatch(UserActions.selectUserId({userId:user.id.toString()}))
   //  if(this.user$!==null){
     this.router.navigate(['/orders', user.id])

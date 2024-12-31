@@ -27,7 +27,7 @@ export const userReducer = createReducer(
   }),
   on(UserActions.setUser, (state, { user }) => {
     const val = adapter.setOne(user, state)
-    alert(JSON.stringify(val))
+    // alert(JSON.stringify(val))
     return val
   }),
 //   on(UserActions.UserApiActions.getUser, (state, { user }) => 
@@ -70,7 +70,7 @@ export const userReducer = createReducer(
   }),
   on(UserActions.setUsers, (state, { users }) => {
     const val = adapter.setMany(users, state);
-    alert(JSON.stringify(val))
+    // alert(JSON.stringify(val))
     return val
   
   }),
@@ -81,7 +81,7 @@ export const userReducer = createReducer(
   }),
   on(UserActions.selectUser, (state, { user }) => {
     const val =  { ...state, user:user };
-    alert(JSON.stringify(val))
+    // alert(JSON.stringify(val))
     return val
   }),
   on(UserActions.clearUsers, state => {

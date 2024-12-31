@@ -3,7 +3,7 @@
 
   
   <app-user-list  
-    [users]="(users$ | async)!"
+    [users]="(users$ | async)"
     (userAddEvent)="onAdd($event)"
     (userRemoveEvent)="onRemove($event)"
     
