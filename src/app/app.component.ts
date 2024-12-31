@@ -28,7 +28,6 @@ export class AppComponent implements OnInit{
   ) {
     this.users$ = this.store.select(selectUsers)
   
-    // localStorage.setItem('Users', JSON.stringify(this.users$))
     }
 
   ngOnInit():void {
