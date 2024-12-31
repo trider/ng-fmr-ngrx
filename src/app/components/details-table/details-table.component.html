@@ -1,0 +1,15 @@
+<table class="table">
+ 
+ <tbody >
+   <tr *ngFor="let val of getRowValues(row);let i = index">
+
+      <th style="vertical-align: top;" *ngIf="val.key !=='orders'">
+        <span>{{val.key}}</span>
+      </th>
+      <td *ngIf="val.key !=='orders'">{{val.value}}</td>
+ 
+   </tr>
+   
+ </tbody>
+
+</table>

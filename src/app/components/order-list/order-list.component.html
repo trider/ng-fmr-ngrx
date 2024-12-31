@@ -1,0 +1,83 @@
+<div class="container-fluid" >
+ <!-- <ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title text-center" id="modal-basic-title">{{title}}</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <form class="form" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+     <div class="mb-3">
+       <label for="email">Email</label>
+       <input type="text" class="form-control" placeholder="Enter email" formControlName="email">
+      </div>
+      <div class="mb-3">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" placeholder="Enter name" formControlName="name">
+      </div>
+    
+      <div class="mb-3">
+       <label for="email">User Name</label>
+       <input type="text" class="form-control" placeholder="Enter user name" formControlName="userName">
+      </div>
+      
+      
+    
+      <div class="text-center d-grid">
+        <button type="submit" class="btn btn-primary rounded-pill ">Submit</button>
+      </div>
+    </form>
+  </div>
+
+</ng-template> -->
+ <table class="table table-striped" style="background-color:white">
+  <thead>
+   <tr>
+    <th *ngFor="let col of tableCols" scope="col">{{col|titlecase}}</th>
+    <!-- <th scope="col" colspan="3">Actions</th> -->
+   </tr>
+  </thead>
+  <tbody>
+   <tr *ngFor="let item of orders">
+    <td *ngFor="let col of tableCols">
+     <span *ngIf="col !== 'price'">{{item[col]}}</span>
+     <span *ngIf="col === 'price'">{{item[col]|currency}}</span>
+
+    </td>
+    <!-- <td>
+     <button class="btn btn-primary rounded-pill" (click)="openModal(content, 'Edit User', item)"
+      style="margin-right: 5px;">
+      Edit
+     </button>
+   </td> -->
+   <!-- <td>
+     <button class="btn btn-success rounded-pill" (click)="openOrder(item)" >
+       Orders
+      </button>
+
+   </td>
+   <td>
+     <button class="btn btn-danger rounded-pill" (click)="deleteItem(item)" >
+      Delete
+     </button>
+    </td> -->
+   </tr>
+   <tr>
+    <th colspan="2">Total</th>
+    <td>
+     <span *ngIf="total>0">{{total|currency}}</span>
+    </td>
+
+   </tr>
+  </tbody>
+  <!-- <tfoot>
+   <tr>
+    <td colspan="8">
+     <div class="d-grid gap-2 d-md-flex justify-content-md-center" >
+      <button class="btn btn-primary rounded-pill " (click)="openModal(content, 'Add User')">Add User</button>
+     
+     </div>
+    </td>
+   </tr>
+  </tfoot> -->
+ </table> 
+</div>

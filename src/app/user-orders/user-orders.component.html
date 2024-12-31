@@ -1,0 +1,16 @@
+<app-navbar></app-navbar>
+<div  class="container-fluid"  style="padding: 10px">
+ <div class="row">
+  <div class="col">
+   <app-details-table [row]="user$"></app-details-table>
+
+  </div>
+  <div class="col-8">
+   <app-order-list [orders]="user$.orders"></app-order-list>
+  </div>
+ </div>
+
+
+</div>
+<app-footer></app-footer>
+

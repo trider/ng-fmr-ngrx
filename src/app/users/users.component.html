@@ -1,0 +1,13 @@
+<app-navbar></app-navbar>
+<div class="container-fluid"  style="padding: 10px">
+
+  
+  <app-user-list  
+    [users]="(users$ | async)!"
+    (userAddEvent)="onAdd($event)"
+    (userRemoveEvent)="onRemove($event)"
+    
+  >
+  </app-user-list>
+</div>
+<app-footer></app-footer>
