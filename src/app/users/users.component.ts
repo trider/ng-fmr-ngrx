@@ -35,17 +35,15 @@ export class UsersComponent implements OnInit{
    
   ) {
     this.users$ = this.store.select(selectUsers)
+ 
     }
 
   ngOnInit():void {
-    this.userService.usersGet().subscribe((users) =>
-        this.store.dispatch(UsersApiActions.userList({ users }))
-    );
+   
 
   }
 
   onAdd(user:any){
-
     this.store.dispatch(UsersApiActions.addUser({
       user
     }));

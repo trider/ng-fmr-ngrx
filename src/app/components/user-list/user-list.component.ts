@@ -46,7 +46,8 @@ export class UserListComponent implements OnInit  {
   userForm = new FormGroup({
     name: new FormControl(''),
     email: new FormControl(''),
-    userName: new FormControl('')
+    userName: new FormControl(''),
+    orders: new FormControl('')
   });
   constructor(
     private modalService: NgbModal,
@@ -67,8 +68,6 @@ export class UserListComponent implements OnInit  {
         name: 'Jack Gold',
         email:'jackgold@gmail.com',
         userName:'jackgold',
-        
-      
       });
     }
     else if(this.title === "Edit User"){
@@ -84,12 +83,23 @@ export class UserListComponent implements OnInit  {
 
   onSubmit(){
     this.modalService.dismissAll();
+    
     if(this.title === "Add User"){
-      this.userAddEvent.emit({
+      const payload: any = {
         id:this.users.length+1,
         ...this.userForm.value,
-     
-      })
+        orders:[
+          { id:1, name:'item 1', price:10 },
+          { id:2, name:'item 2', price:10 },
+          { id:3, name:'item 2', price:10 },
+          { id:4, name:'item 2', price:10 }
+        ]
+        
+        
+      }
+
+
+      this.userAddEvent.emit(payload)
     }
     else if(this.title === "Edit User"){
       this.userUpdateEvent.emit({

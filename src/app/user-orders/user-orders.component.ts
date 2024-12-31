@@ -40,20 +40,18 @@ export class UserOrdersComponent implements OnInit {
     private userService:UserService,
    ) { 
     this.userId = this.route.snapshot.paramMap.get('id')?.toString();
+    
   
+    
+  
+   
    }
  
    ngOnInit(): void {
    
-    this.userService.userGet(this.userId).subscribe((user) =>
-    {
+    this.userService.userGet(this.userId).subscribe((user) =>{
       this.user$=user  
-
-      // delete(this.details.orders)
-     
-
-    }
-     );
+    });
    }
 
   
